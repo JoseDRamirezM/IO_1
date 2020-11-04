@@ -6,27 +6,8 @@ def to_tableau(c, A, b):
     z = c + [0]
     return xb + [z]
 
-
 def to_objective_function_value(c, solution):
     return sum(np.array(c) * np.array(solution))
-
-def can_be_improved(tableau):
-    z = tableau[-1]
-    return any(x > 0 for x in z[:-1])
-
-def get_pivot_position(tableau):
-    z = tableau[-1]
-    column = next(i for i, x in enumerate(z[:-1]) if x > 0)
-    
-    restrictions = []
-    for eq in tableau[:-1]:
-        el = eq[column]
-        restrictions.append(math.inf if el <= 0 else eq[-1] / el)
-        
-    if (all([r == math.inf for r in restrictions])):
-        raise Exception("Linear program is unbounded.")
-
-    row = restrictions
 
 def pivot_step(tableau, pivot_position):
     new_tableau = [[] for eq in tableau]
