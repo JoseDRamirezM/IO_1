@@ -212,7 +212,7 @@ class Calcular_Puntos(object):
 def evaluar_funcion_objetivo(c, solucion):
     return sum(np.array(c) * np.array(solucion))
 
-c = [7,-10,0,0,0]
+c = [7, -10, 0, 0, 0]
 A = [
     [-1, 1, 1, 0, 0],
     [-1, -5, 0, 1, 0],
@@ -230,7 +230,7 @@ E = [
 f = [-4, -6]
 
 dual = evaluar_funcion_objetivo(c, dos_fases(c, A, b))
-print('Dual: ', dual)
+print('Dos fases: ', dual)
 
 dual2 = evaluar_funcion_objetivo(d, dos_fases(d,E,f))
-print('Dual: ', dual2)
+print('Dos fases: ', dual2)
