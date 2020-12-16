@@ -44,3 +44,9 @@ A continuación un ejemplo de la entrada de un problema de minimización.
 1,3,>=,20
 1,1,=,10
 ```
+Posteriormente en el archivo 'main.py' en la linea 45 asignamos el nombre del archivo
+que contiene el problema, a continuacion un ejemplo:
+```python
+main("nombreDelArchivo.txt")
+```
+
