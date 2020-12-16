@@ -17,19 +17,30 @@
 La forma de ingresar los plantemientos se hace mediante archivos .txt de la siguiente manera
 
 ```python
-#Primera linea
+#Primera linea: el numero de metodo de solucion siempre sera igual a dos, para ejecutar el metodo de las dos fases
 metodo de solucion, maximizar(max) o minimizar(min), numero de variables,numero de restricciones
 #Segunda linea: coeficientes de las variables
-coef variable 1, coef variable  2, coef  variable 3,..., coef variable  n
+coef 1, coef  2, coef 3,..., coef n
 #Tercera linea: restricciones, se soportan todos los tipos de desigualdades
-coef variable 1, coef variable  2, coef  variable 3,..., coef variable  n, <=, lado derecho
-coef variable 1, coef variable  2, coef  variable 3,..., coef variable  n, <=, lado derecho
+coef 1, coef 2, coef 3,..., coef n, <=, lado derecho
+coef 1, coef 2, coef 3,..., coef n, <=, lado derecho
+.
+.
+.
 ```
-A continuación un ejemplo de la entrada un archivo de un problema.
+A continuación un ejemplo de la entrada de un problema de maximización.
 ```python
 2,max,2,3
 4,6
 2,1,<=,180
 1,2,<=,160
 1,1,<=,100
+```
+A continuación un ejemplo de la entrada de un problema de minimización.
+```python
+2,min,2,3
+2,3
+0.5,0.25,<=,4
+1,3,>=,20
+1,1,=,10
 ```
