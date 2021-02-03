@@ -1,5 +1,6 @@
 from simplex import Simplex
 
+#Clase principal
 class DosFases(Simplex):
 
     fila_objetivo_aux = []
@@ -11,6 +12,7 @@ class DosFases(Simplex):
 
         for i, operation in enumerate(self.operadores):
 
+            #identificar el tipo de operador para saber que variables adicionar
             if operation == '<=':  # +S
                 self.variables(i, 1)
                 self.fila_objetivo.append(0)

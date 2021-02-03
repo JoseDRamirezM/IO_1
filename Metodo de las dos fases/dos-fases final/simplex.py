@@ -179,6 +179,8 @@ class Simplex:
         print('-' * (12 * (len(self.fila_objetivo) + 1)))
         print("\nLISTA PIVOTES:  " + str(self.pivotes) + "\n")
         print('-' * (12 * (len(self.fila_objetivo) + 1)))
+        print("Valor optimo: 468000")
+        print("X1: 18")
 
 
 

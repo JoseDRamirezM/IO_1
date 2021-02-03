@@ -42,4 +42,4 @@ def main(archivo):
         print("El archivo presenta un problema")
 
 if __name__ == '__main__':
-    main("problema1.txt")
+    main("planta_termo_electrica.txt")
