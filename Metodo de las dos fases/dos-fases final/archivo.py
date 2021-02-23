@@ -75,6 +75,19 @@ class Archivo:
             print("ERROR: El archivo no existe.")
 
     @staticmethod
+    def crear_modelo(contenido):
+        nombre_archivo = "planta_termo_electrica.txt"
+        try:
+            archivo = open( "planta_termo_electrica.txt", "w")
+            archivo.write( "2,max,2,4" +"\n")
+            archivo.write( "26000,18000" +"\n")
+            for item in contenido:
+                archivo.write(str(item +"\n"))
+            archivo.close()
+        except:
+            print("ERROR: El archivo no existe.")        
+
+    @staticmethod
     def is_digit(n):
         try:
             float(n)
